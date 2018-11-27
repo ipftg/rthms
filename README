@@ -1,0 +1,45 @@
+=======================================================
+
+RTHMS: a profiling, analysis and memory tracing tool 
+       for multi-threaded applications on Heterogeneous
+       Memory Systems
+
+=======================================================
+
+INSTALL
+
+1. Download Pin, http://www.pintool.org
+    Tested with Pin 3.2 and 3.5 on an x86-64 architecture. Compiler flags are set up for Pin 3.5.
+2. Change in Makefile to point to the Intel Pin directory. 
+    Compile with VERBOSE flag to see more outputs.
+3. compile by 'make'
+
+
+RUN
+
+1. Compile the test application. Debug flat '-g' is needed to get source code information. 
+   'make test'
+2. Profile the test application with the tool.
+   'make run'
+
+
+OPTIONS
+
+-help: display the details of tool options.
+
+-tracer: use the tool as a memory tracer. Work with or without cache models. Save memory accesses.
+
+-memtrace: use the tool as a data-centric profiler. Work with or without cache models. Save memory accesses.
+
+-cache: enable a cache model
+
+-o: specify output file name
+
+-t: specify user-selected routines to track
+
+-a: specify user-selected allocation routines to track
+
+-k: specify hooks for profiling and the number of visits N. Deatch from pin after N vistis.
+
+
+
